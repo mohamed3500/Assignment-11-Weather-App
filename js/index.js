@@ -16,7 +16,7 @@ searchInput.addEventListener("input", function () {
 })
 
 async function getForecast(cityOrCordinates) {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=a3225e0161464786858145546241712&q=${cityOrCordinates}&days=3`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=a3225e0161464786858145546241712&q=${cityOrCordinates}&days=3`);
     finalResponse = await response.json();
     if (!finalResponse.error) {
         getDays();
